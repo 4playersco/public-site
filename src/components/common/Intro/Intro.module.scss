@@ -1,0 +1,19 @@
+@import "../../../assets/styles/variables.module.scss";
+@import "../../../assets/styles/mixins.module.scss";
+
+.Intro {
+  padding: $space 0;
+
+  @include breakpoint($bp-md) {
+    padding: 50px 0;
+  }
+
+  p {
+    line-height: 1.6;
+
+    @include breakpoint($bp-md) {
+      line-height: 1.8;
+      text-align: justify;
+    }
+  }
+}

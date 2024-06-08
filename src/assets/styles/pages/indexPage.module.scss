@@ -1,0 +1,16 @@
+@import '../mixins.module';
+
+.logo {
+  border-radius: 5px;
+  width: 75px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+
+  @include breakpoint($bp-md) {
+    @include alignleft;
+    padding: 0 0 50px;
+    width: initial;
+    height: initial;
+  }
+}

@@ -1,0 +1,33 @@
+@import "~/assets/styles/variables.module.scss";
+@import "~/assets/styles/mixins.module.scss";
+
+.Gallery {
+  @include darkSection("/images/tracks.jpg");
+}
+
+.galleryWrapper {
+  width: 960px; // 1920
+  height: 600px; // 1200
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid $color-gray;
+
+  .slider-container {
+    width: 960px;
+    height: 600px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: $space;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $space;
+
+  li {
+    background: $color-light;
+    padding: $space;
+  }
+}

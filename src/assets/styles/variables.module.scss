@@ -1,0 +1,35 @@
+// Colors
+$color-light: #FFF;
+$color-dark: #000;
+$color-gray-light: #4B5767;
+$color-gray: #182337;
+$color-primary: #CE312C;
+$color-primary-light: #FF372D;
+$color-secondary: $color-gray-light; // links, etc.
+$color-secondary-dark: $color-gray;
+$color-icon: #E9E9E9;
+
+/*
+https://www.colourlovers.com/palette/4566752/4-Players_Backup
+*/
+
+// Breakpoints
+$bp-sm: 480px;
+$bp-md: 720px;
+$bp-lg: 960px;
+$bp-xl: 1800px;
+$max-width: 1200px;
+$content: 760px;
+
+// Fonts
+$font-icons: 'cf-net'; // Fontastic.me
+$font-default: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; // Typekit
+$font-primary: 'Josefin Sans', $font-default; // TypeKit
+$font-secondary: 'Merriweather', Georgia, 'Times New Roman', serif; // TypeKit
+
+// Typography
+$space: 20px;
+$content-vertical-padding: 110px;
+
+// Misc
+$box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.09);

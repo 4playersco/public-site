@@ -1,0 +1,46 @@
+@import "../../../assets/styles/variables.module.scss";
+@import "../../../assets/styles/mixins.module.scss";
+
+.ContactForm {
+  margin-top: -($space / 2);
+
+  @include breakpoint($bp-md) {
+    margin-bottom: $space;
+  }
+}
+
+.formFields {
+  margin-bottom: ($space / 2);
+
+  @include breakpoint($bp-md) {
+    margin-bottom: $space;
+  }
+}
+
+.field {
+  display: block;
+  width: 100%;
+  margin-top: $space / 2;
+  padding: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: $font-default;
+  border: 1px solid $color-gray-light;
+  border-radius: 0;
+
+  @include breakpoint($bp-md) {
+    margin-top: $space;
+  }
+}
+
+.error {
+  color: $color-primary;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 4px 0 0 4px;
+}
+
+.recaptcha {
+  margin: $space auto;
+}

@@ -1,0 +1,18 @@
+@import "../../../assets/styles/variables.module.scss";
+@import "../../../assets/styles/mixins.module.scss";
+
+.container {
+  @include clearfix;
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 0 ($space * 0.5);
+
+  @media (min-width: $bp-md) {
+    padding: 0 ($space * 0.75);
+  }
+}
+
+.containerSmall {
+  @extend .container;
+  max-width: $content;
+}

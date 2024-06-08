@@ -1,0 +1,33 @@
+@import "../../../assets/styles/variables.module.scss";
+@import "../../../assets/styles/mixins.module.scss";
+
+.Footer {
+  text-align: center;
+  background: $color-dark;
+}
+
+.pageCap {
+  border-top: 1px solid lighten($color-gray-light, 40%);
+  padding: 20px 0;
+  background: $color-light;
+
+  @include breakpoint($bp-md) {
+    padding: 50px 0;
+  }
+}
+
+.info {
+  padding: 20px 0;
+  color: $color-light;
+  font-family: $font-primary;
+
+  @include breakpoint($bp-md) {
+    padding: 50px 0;
+  }
+}
+
+.logo {
+  border-radius: 7px;
+  width: 50px;
+  height: auto;
+}

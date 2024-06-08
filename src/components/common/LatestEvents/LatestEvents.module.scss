@@ -1,0 +1,54 @@
+@import "../../../assets/styles/variables.module.scss";
+@import "../../../assets/styles/mixins.module.scss";
+
+.LatestEvents {
+  @include darkSection("/images/tracks.jpg");
+  color: white;
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include breakpoint($bp-md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $space;
+  }
+
+  @include breakpoint($bp-lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $space;
+  }
+}
+
+.listItem {
+  // background: $color-light;
+  // padding: $space;
+  display: flex;
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: $space;
+}
+
+.heading {
+  color: $color-light;
+  margin-top: 0;
+}
+
+.eventHeading {
+  margin: 0 0 0 $space;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  color: $color-light;
+}

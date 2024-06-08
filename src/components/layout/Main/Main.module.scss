@@ -1,0 +1,234 @@
+@import "~/assets/styles/variables.module.scss";
+@import "~/assets/styles/mixins.module.scss";
+
+.Main {
+  padding: 20px 0;
+  font-family: $font-default;
+
+  @include breakpoint($bp-md) {
+    padding: 50px 0;
+  }
+
+  // Content
+  p {
+    color: $color-gray;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    margin: 0 0 1.5em;
+
+    @include breakpoint($bp-md) {
+      font-size: 2rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-default;
+    line-height: 1.2;
+    margin: 0.5em 0;
+    clear: both;
+  }
+
+  h1 {
+    font-size: 3rem;
+
+    @media (min-width: $bp-md) {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.6rem;
+
+    @media (min-width: $bp-md) {
+      font-size: 3.2rem;
+    }
+  }
+
+  h3 {
+    font-size: 2.4rem;
+
+    @media (min-width: $bp-md) {
+      font-size: 3.2rem;
+    }
+  }
+
+  h4 {
+    font-size: 2.2rem;
+
+    @media (min-width: $bp-md) {
+      font-size: 2.4rem;
+    }
+  }
+
+  h5 {
+    font-size: 1.8rem;
+
+    @media (min-width: $bp-md) {
+      font-size: 2rem;
+    }
+  }
+
+  h6 {
+    font-size: 1.6rem;
+
+    @media (min-width: $bp-md) {
+      font-size: 1.8rem;
+    }
+  }
+
+  blockquote {
+    @media (min-width: $bp-md) {
+      margin: 0 1.5em;
+    }
+  }
+
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+  }
+
+  blockquote,
+  q {
+    padding: 10px 0;
+    text-align: center;
+
+    @media (min-width: $bp-md) {
+      padding: ($space * 2) 0;
+    }
+
+    p {
+      font-size: 1.8rem;
+      font-style: italic;
+      margin: 0 auto;
+      padding: $space / 2;
+      text-align: left;
+
+      @media (min-width: $bp-md) {
+        font-size: 2.4rem;
+        padding: $space;
+        width: 70%;
+      }
+
+      p {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  ul,
+  ol {
+    margin: 0 0 1.5em 0;
+
+    @media (min-width: $bp-md) {
+      margin: 0 0 1.5em 1.5em;
+    }
+
+    li {
+      padding: 9px 0 7px;
+    }
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li > ul,
+  li > ol {
+    margin-bottom: 0;
+    margin-left: 1.5em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin: 0 1.5em 1.5em;
+  }
+
+  img {
+    height: auto; // Make sure images are scaled correctly
+    max-width: 100%; // Adhere to container width
+  }
+
+  table {
+    margin: 0 0 1.5em;
+    width: 100%;
+  }
+
+  // Make sure embeds and iframes fit their containers
+  embed,
+  iframe,
+  object {
+    max-width: 100%;
+  }
+
+  address {
+    margin: 0 0 1.5em;
+  }
+
+  pre {
+    background: $color-gray-light;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+  }
+
+  code,
+  kbd,
+  tt,
+  var {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 1.5rem;
+  }
+
+  abbr,
+  acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+  }
+
+  mark,
+  ins {
+    background: #fff9c0;
+    text-decoration: none;
+  }
+
+  big {
+    font-size: 125%;
+  }
+
+  dfn,
+  cite,
+  em,
+  i {
+    font-style: italic;
+  }
+
+  hr {
+    background: url("/images/lines-gray.png") left bottom repeat-x;
+    height: 3px;
+    margin-bottom: 1.5em;
+    clear: both;
+    border: 0;
+    box-sizing: content-box;
+    overflow: visible;
+    margin: 40px 0;
+    padding: 0;
+  }
+}

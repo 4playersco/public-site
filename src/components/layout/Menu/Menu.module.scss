@@ -1,0 +1,118 @@
+@import "../../../assets/styles/variables.module.scss";
+@import "../../../assets/styles/mixins.module.scss";
+
+.Menu {
+  margin-bottom: $space * 1.6;
+
+  @include breakpoint($bp-md) {
+    margin-bottom: 0;
+    padding-top: 18px;
+  }
+}
+
+.list {
+  display: none;
+
+  @include breakpoint($bp-md) {
+    padding: 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0 10px;
+    z-index: 1;
+    position: relative;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    font-family: $font-primary;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+}
+
+.listHeading a {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  font-family: $font-primary;
+  text-transform: uppercase;
+
+  @include breakpoint($bp-md) {
+    font-size: 3rem;
+  }
+}
+
+.listBigNumber {
+  font-size: 2.5rem;
+
+  @include breakpoint($bp-md) {
+    font-size: 3.5rem;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  margin: ($space / 2) 0;
+  justify-content: space-between;
+}
+
+.mobileTitle {
+  text-align: left;
+  margin: 0;
+
+  @include breakpoint($bp-md) {
+    display: none;
+  }
+}
+
+.mobileList {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($bp-md) {
+    display: none;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 0;
+    display: block;
+  }
+}
+
+.active {
+  display: block;
+
+  @include breakpoint($bp-md) {
+    display: none;
+  }
+}
+
+.mobileMenuButton {
+  padding: 4px 2px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 5px 0;
+
+  @include breakpoint($bp-md) {
+    display: none;
+  }
+}

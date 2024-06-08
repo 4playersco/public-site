@@ -1,0 +1,25 @@
+@import "../../../assets/styles/variables.module.scss";
+
+.Calendar {
+  border: 3px solid $color-primary;
+  text-align: center;
+  font-family: $font-default;
+  min-width: 50px;
+  background: $color-light;
+  color: $color-gray-light;
+}
+
+.month {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2px 4px;
+  background: $color-primary;
+  color: $color-light;
+  border-bottom: 3px solid $color-primary;
+}
+
+.date {
+  font-size: 16px;
+  padding: 5px;
+}
