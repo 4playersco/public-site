@@ -94,12 +94,12 @@ const AboutPage = async () => {
         follow &lsquo;Leave No Trace&rsquo; rules.
       </p> */}
 
-        <hr />
+        {/* <hr />
 
         <p>
           If you have any questions, please feel free to{" "}
           <Link href="/contact">contact us</Link> for more information.
-        </p>
+        </p> */}
       </Main>
     </Layout>
   );

@@ -1,6 +1,9 @@
+"use client";
+
 import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import styles from "./Footer.module.scss";
 import Container from "../../utility/Container";
@@ -12,11 +15,17 @@ type FooterProps = {
 };
 
 const Footer: FC<FooterProps> = ({ siteTitle = "" }) => {
+  const pathname = usePathname();
+  console.log(pathname);
+
   return (
     <footer className={styles.Footer}>
-      <div className={styles.pageCap}>
-        <Button href="/membership">Get Started</Button>
-      </div>
+      {pathname !== "/membership" && (
+        <div className={styles.pageCap}>
+          <Button href="/membership">Get Started</Button>
+        </div>
+      )}
+
       <Container className={styles.info}>
         <Link href="/">
           <Image

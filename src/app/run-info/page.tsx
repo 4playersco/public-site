@@ -11,10 +11,11 @@ import { getClient } from "~/lib/apollo-ssr-client";
 
 const query = gql`
   query {
-    banner(id: "10ZL2u0Ul2JghMr0Aienys") {
+    page(id: "10ZL2u0Ul2JghMr0Aienys") {
       title
-      subtitle
-      content
+      content {
+        json
+      }
     }
   }
 `;
@@ -22,7 +23,6 @@ const query = gql`
 const RunInfoPage = async () => {
   const client = getClient();
   const { data } = await client.query({ query });
-  console.log(data);
 
   return (
     <Layout showSmallHeader={true} pageTitle={data.page.title}>
@@ -177,11 +177,12 @@ const RunInfoPage = async () => {
         to get started.
       </p> */}
 
-        <hr />
+        {/* <hr />
+
         <p>
           If you have any questions, please feel free to{" "}
           <Link href="/contact">contact us</Link> for more information.
-        </p>
+        </p> */}
       </Main>
     </Layout>
   );

@@ -24,6 +24,21 @@ const query = gql`
       subtitle
       content
     }
+    homeMissionStatement(id: "2CeGklBjbZ3z1kb5iL38NH") {
+      title
+    }
+    missionCollection {
+      total
+      items {
+        sys {
+          id
+        }
+        title
+        description {
+          json
+        }
+      }
+    }
   }
 `;
 
@@ -48,7 +63,10 @@ const IndexPage = async () => {
         </p>
       </Intro>
       <Gallery images={galleryImages} />
-      <Buckets />
+      <Buckets
+        title={data.homeMissionStatement.title}
+        missions={data.missionCollection.items}
+      />
       <LatestEvents />
       {/* <LatestNews /> */}
     </Layout>

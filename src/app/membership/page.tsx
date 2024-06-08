@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { gql } from "@apollo/client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -162,21 +161,6 @@ const MembershipPage = async () => {
           participation in our community.
         </li>
           </ul>*/}
-
-        <hr />
-
-        <div className={styles.createBtn}>
-          <Button href="https://members.4-playersofcolorado.org/register">
-            Create an Account
-          </Button>
-        </div>
-
-        <hr />
-
-        <p>
-          If you have any questions, please feel free to{" "}
-          <Link href="/contact">contact us</Link> for more information.
-        </p>
       </Main>
     </Layout>
   );
